@@ -82,6 +82,10 @@ function main() {
 main();
 
 
+function searchBtn(){
+   console.log( document.getElementById("searchName").value);
+   
+}
 
 
 
