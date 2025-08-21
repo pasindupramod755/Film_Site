@@ -49,8 +49,8 @@ function mainLoad() {
                     <h5 class="card-title" id="${"name" + i}">Inception</h5>
                     <p class="card-text" id = "${"date"+i}"></p>
                     <div class="d-flex justify-content-between align-items-center">
-                        <span class="h5 mb-0">$29.99</span>
-                        <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+                        <span class="h5 mb-0" id = "${"rated"+i}"></span>
+                        <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i>Download</button>
                     </div>
                 </div>
             </div>
@@ -62,6 +62,7 @@ function ar(index, data) {
     document.getElementById("image" + index).src = data.Poster;
     document.getElementById("name" + index).innerText = data.Title;
     document.getElementById("date" + index).innerText = data.Released;
+    document.getElementById("rated" + index).innerText = data.Rated;
 
 }
 
