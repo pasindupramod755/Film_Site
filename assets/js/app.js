@@ -39,6 +39,7 @@ let fileNameArray = [
     }
 ];
 
+
 function mainLoad() {
     const setProduct = document.getElementById("product");
     for (let i = 0; i < fileNameArray.length; i++) {
@@ -47,10 +48,10 @@ function mainLoad() {
                 <img src="" class="card-img-top" alt="Product 3" id="${"image" + i}">
                 <div class="card-body">
                     <h5 class="card-title" id="${"name" + i}">Inception</h5>
-                    <p class="card-text" id = "${"date"+i}"></p>
+                    <p class="card-text" id = "${"date" + i}"></p>
                     <div class="d-flex justify-content-between align-items-center">
-                        <span class="h5 mb-0" id = "${"rated"+i}"></span>
-                        <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i>Download</button>
+                        <span class="h5 mb-0" id = "${"rated" + i}"></span>
+                        <a href="view.html"><button class="btn btn-outline-primary" onclick="downloadBtn(this.id)" id = "${"download" + i}"><i class="bi bi-cart-plus"></i>Download</button></a>                        
                     </div>
                 </div>
             </div>
@@ -79,14 +80,43 @@ function main() {
     }
 }
 
-main();
 
 
-function searchBtn(){
-   console.log( document.getElementById("searchName").value);
-   
+
+if (window.location.pathname.endsWith("index.html")) {
+    main();
 }
 
+
+function downloadBtn(id) {
+    console.log(id);
+    localStorage.setItem('movieId', id)
+    //window.location.href = "view.html";
+    console.log(localStorage.getItem('movieId'))
+}
+
+window.onload = function() {
+    localStorage.getItem("movieId");
+    let number = parseInt(localStorage.getItem("movieId").substring(localStorage.getItem("movieId").length-1));
+    fetch("https://www.omdbapi.com/?apikey=1c768e4f&t=" + fileNameArray[number].name)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("movieName").innerText = data.Title;
+                document.getElementById("movieYear").innerText = `Year - `+data.Year;
+                document.getElementById("movieImage").src = data.Poster;
+                document.getElementById("movieGenre").innerText = data.Genre;
+                document.getElementById("movieDirector").innerText = data.Director;
+                document.getElementById("rateing").innerText = data.Rated;
+                document.getElementById("moviePlot").innerText = data.Plot;
+            });
+}
+
+
+
+function searchBtn() {
+    console.log(document.getElementById("searchName").value);
+
+}
 
 
 
