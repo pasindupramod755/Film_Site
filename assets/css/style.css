@@ -14,3 +14,9 @@
   --bs-btn-disabled-border-color: #f7971e;
   --bs-gradient: none;
 }
+
+
+.navBoder{
+  border: 3px solid;
+  border-color: #fff;
+}
