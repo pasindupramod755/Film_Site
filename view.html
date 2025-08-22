@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Film Hub</title>
+    <title>View Film</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -35,39 +35,32 @@
                         <a class="nav-link active text-white" aria-current="page" href="view.html">View</a>
                     </li>
                 </ul>
-                <input class="form-control me-2 w-25" type="search" placeholder="Search" aria-label="Search"
-                    id="searchName" />
-                <button class="btn btn-outline-success " type="submit" onclick="searchBtn()">Search</button>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        id="searchName" />
+                    <button class="btn btn-outline-success" type="submit" onclick="searchBtn()">Search</button>
+                </form>
             </div>
         </div>
     </nav>
-    <div class="d-flex justify-content-center m-3">
-        <img src="assets/image/icon.jpg" alt="" srcset="">
-    </div>
-
-    <Marquee class="text-white fs-4">Welcome to <span style="color: rgb(255, 255, 255);">Film <mark
-                style="background-color: #f7971e; border-radius: 5px;">hub</mark> You can download any type of FILM you
-            want here.</Marquee>
 
     <div class="row m-5">
         <div class="col-lg-4 col-md-6 col-sm-10 col-12 text-center">
-            <img src="" alt="" srcset="" id="hmovieImage">
+            <img src="https://m.media-amazon.com/images/M/MV5BZGRiZDZhZjItM2M3ZC00Y2IyLTk3Y2MtMWY5YjliNDFkZTJlXkEyXkFqcGc@._V1_SX300.jpg"
+                alt="" srcset="" id="movieImage">
         </div>
         <div class="col-lg-6 col-md-8 col-sm-10 col-12">
-            <h1 class="text-white fw-bold" id="hmovieName"></h1>
-            <h3 class="text-white" id="hmovieYear"></h3>
-            <h3 class="text-white" id="hmovieGenre"></h3>
-            <h3 class="text-white" id="hmovieDirector"></h3>
-            <h3 class="text-white" id="hrateing"></h3>
-            <h3 class="text-white" id="hmoviePlot"></h3><br>
+            <h1 class="text-white fw-bold" id="movieName">The Lion King</h1>
+            <h3 class="text-white" id="movieYear">Year - 1994</h3>
+            <h3 class="text-white" id="movieGenre">Genre - Animation, Adventure, Drama</h3>
+            <h3 class="text-white" id="movieDirector">Director - Roger Allers, Rob Minkoff</h3>
+            <h3 class="text-white" id="rateing">IMDb Rating - G</h3>
+            <h3 class="text-white" id="moviePlot">Plot - Lion prince Simba and his father are targeted by his bitter uncle, who wants
+                to ascend the throne himself.</h3><br>
+            <a href="index.html"><button class="btn btn-outline-danger"><i class="bi bi-cart-plus"></i>Back</button></a>
+            <button class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i>Download</button>
         </div>
     </div>
-
-    <div class="container py-5">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="product"></div>
-    </div>
-
-
     <script src="assets/js/app.js"></script>
 </body>
 

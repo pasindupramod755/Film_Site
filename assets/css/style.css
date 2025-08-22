@@ -1,0 +1,27 @@
+.btn-outline-success {
+  --bs-btn-color: #f7971e;
+  --bs-btn-border-color: #f7971e;
+  --bs-btn-hover-color: #000000;
+  --bs-btn-hover-bg: #f7971e;
+  --bs-btn-hover-border-color: #f7971e;
+  --bs-btn-focus-shadow-rgb: 25, 135, 84;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #f7971e;
+  --bs-btn-active-border-color: #198754;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #f7971e;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #f7971e;
+  --bs-gradient: none;
+}
+
+
+.navBoder{
+  border: 3px solid;
+  border-color: #fff;
+}
+
+.aboutTitle{
+  font-size: 80px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
