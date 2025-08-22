@@ -20,3 +20,8 @@
   border: 3px solid;
   border-color: #fff;
 }
+
+.aboutTitle{
+  font-size: 80px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
